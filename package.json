@@ -1,0 +1,24 @@
+{
+  "name": "qa-challenge-playwright-framework",
+  "version": "1.0.0",
+  "description": "Playwright with Typescript QA Challenge Custom changes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "clean:allure": "rm -rf allure-results allure-report",
+    "generate:allure": "allure generate allure-results -o allure-report",
+    "test:allure": "npm run clean:allure && npm run test || true  && allure generate allure-results --clean && allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "allure-commandline": "^2.34.0",
+    "allure-playwright": "^3.2.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  }
+}
